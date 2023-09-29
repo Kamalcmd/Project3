@@ -8,6 +8,7 @@
 #include "Customers.h"
 class CustomerFactory {
 public:
+    /* function declartion for creating customer */
     Customer createCustomer(const std::string& name, CustomerRequest request, int sequenceNumber);
 
 };

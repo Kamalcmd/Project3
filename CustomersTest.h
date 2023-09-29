@@ -11,11 +11,12 @@ class CustomersTest {
 private:
 
 public:
+//All Test declaration
     void Test1();
     void Test2();
     void Test3();
     void Test4();
-    std::string foundOrNot(BaseCustomer &b);
+    std::string foundOrNot(BaseCustomer &base);
 
 };
 

@@ -5,7 +5,7 @@
 #include "Customer.h"
 #include <ctime>
 
-
+/* constructor definition of customer */
 Customer::Customer(const std::string &name, CustomerRequest request, int sequenceNUmber) {
     this->name = name;
     this->request = request;
@@ -15,6 +15,7 @@ Customer::Customer(const std::string &name, CustomerRequest request, int sequenc
     this->timestamp= currentTime;
 }
 
+/* definition of overloaded operator == */
 bool Customer::operator==(const Customer &other) const {
     if(this->name == other.name &&
     this->request == other.request &&

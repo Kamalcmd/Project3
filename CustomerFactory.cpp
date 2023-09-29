@@ -3,7 +3,7 @@
 //
 
 #include "CustomerFactory.h"
-
+/* function definition for creating customer */
 Customer CustomerFactory::createCustomer(const string &name, CustomerRequest request,int sequenceNumber) {
     return Customer(name, request,sequenceNumber);
 }

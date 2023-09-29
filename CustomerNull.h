@@ -6,7 +6,10 @@
 #define PROJECT3_CUSTOMERNULL_H
 #include "BaseCustomer.h"
 #include<iostream>
-
+/*
+ * This class is created for the purpose of returning CustomerNUll object
+ * if the search does not found the customer while searching.
+ * */
 class CustomerNull : public BaseCustomer{
 public:
     CustomerNull();

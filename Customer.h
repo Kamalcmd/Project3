@@ -15,19 +15,20 @@ enum CustomerRequest{Repair, Training, Purchase, Other};
 class Customer :public BaseCustomer{
 private:
      int sequenceNumber;
-  std::time_t timestamp;
+    std::time_t timestamp;
     CustomerRequest request;
     std::string name;
 
 
 public:
+    /* constructor declaration */
     Customer(const std:: string& name, CustomerRequest request, int sequenceNumber);
+    /* declaration of == operator overloading */
     bool operator==(const Customer& other) const;
+
     std::time_t getTimestamp() const;
 
      int getSequenceNumber  () const ;
-
-
 
     CustomerRequest getRequest() const;
     std::string getName() const override;

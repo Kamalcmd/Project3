@@ -4,7 +4,7 @@
 
 #include "CustomersTest.h"
 #include "Customers.h"
-
+//Defining the Test1 function
 void CustomersTest::Test1() {
     Customers c;
     c.add("First", CustomerRequest::Training);
@@ -17,7 +17,7 @@ void CustomersTest::Test1() {
     cout<<"Fourth Customr: "<<foundOrNot(c.search("Fourth"))<<endl;
 
 }
-
+//Defining the Test2 function
 void CustomersTest::Test2() {
     Customers c;
     //adding first customer
@@ -36,7 +36,7 @@ void CustomersTest::Test2() {
 
 
 }
-
+//defining Test3() function
 void CustomersTest::Test3() {
     //.remove("Kamal");
 Customers customerList;
@@ -51,15 +51,16 @@ Customers customerList;
 
 
 
-
-string CustomersTest::foundOrNot(BaseCustomer &b){
-    if(b.getName()=="null")
+//helper function
+string CustomersTest::foundOrNot(BaseCustomer &base){
+    if(base.getName()=="null")
         return "Not Found";
     else
         return "Found";
 
 }
 
+//defining Test3 function
 void CustomersTest::Test4() {
     Customers c;
     c.add("First",CustomerRequest::Training);
@@ -69,7 +70,6 @@ void CustomersTest::Test4() {
         cout<<"The overloaded operator on same object test passed";
     else
         cout<<"The overloaded operator on same object test failed";
-
 
     cout<<endl<<"Equal Operator test with different object"<<endl;
     if(c.getCustomerList().front()==c.getCustomerList().back())

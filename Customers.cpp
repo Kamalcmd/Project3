@@ -5,7 +5,7 @@
 #include "Customers.h"
 #include "CustomerFactory.h"
 #include "CustomerNull.h"
-
+/* helper function go convert time to string format */
 std::string timeToString(std::time_t timeStamp)
 {
     char timeStr[100];
@@ -14,6 +14,7 @@ std::string timeToString(std::time_t timeStamp)
 
 }
 
+/* helper function to convert enum to string */
 const char* enumToString(CustomerRequest request) {
     switch (request) {
         case 0:
@@ -30,7 +31,7 @@ const char* enumToString(CustomerRequest request) {
 Customers::Customers() {
     sequence=1;
 }
-
+//function definition to add customer in the customer list
 void Customers::add(const string &name, CustomerRequest request) {
     CustomerFactory factory;
     //creates object of Customer using factory
@@ -40,14 +41,14 @@ void Customers::add(const string &name, CustomerRequest request) {
 
 }
 
-
+//function definition to remove customer
 void Customers::remove(const string &other) {
     customerList.remove_if([other](const Customer& customer){
       return customer.getName()==other;
     });
 }
 
-
+//function definition to search customer by name
 BaseCustomer& Customers::search(const string &name) {
     for(Customer& customer : customerList){
         if(customer.getName()==name){
@@ -62,6 +63,7 @@ std::list<Customer> Customers:: getCustomerList(){
     return customerList;
 }
 
+//definition of << operator overloading
 std::ostream &operator<<(ostream &os, Customers &customerList) {
     for(Customer customer: customerList.getCustomerList())
     {
